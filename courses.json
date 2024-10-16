@@ -2,11 +2,12 @@
   "courses": [
     {
       "id": "2",
-      "title": "Updated: Updated: Updated: Updated: Updated: Updated: Updated: Updated: Data Structures and Algorithms",
+      "title": "Data Structures and Algorithms",
       "instructor": "Prof. John Doe",
       "credits": 4,
       "schedule": "Tue/Thu 2:00 PM - 4:00 PM",
-      "image": "/api/placeholder/800/600"
+      "image": "/api/placeholder/800/600",
+      "description": "ttttttttttt"
     },
     {
       "id": "3",
@@ -41,9 +42,9 @@
       "image": "/api/placeholder/800/600"
     },
     {
-      "id": "d142",
-      "title": "Updated: hghghg",
-      "description": "hghgh"
+      "id": "8996",
+      "title": "helloooo",
+      "description": "hiiiiiiiiiiiiiiiiiiiiii"
     }
   ],
   "comments": [

@@ -6,6 +6,9 @@ const CoursesPage = () => {
   const dispatch = useDispatch();
   const { courses, status, error } = useSelector((state) => state.courses);
   const [newCourse, setNewCourse] = useState({ title: '', description: '' });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isUpdating, setIsUpdating] = useState(false);
+  const [editingCourse, setEditingCourse] = useState(null);
 
   useEffect(() => {
     if (status === 'idle') {
@@ -24,15 +27,32 @@ const CoursesPage = () => {
   const handleAddCourse = () => {
     dispatch(addCourse(newCourse));
     setNewCourse({ title: '', description: '' });
+    setIsModalOpen(false);  // Close modal after adding
   };
 
-  const handleUpdateCourse = (course) => {
-    const updatedCourse = { ...course, title: `Updated: ${course.title}` };
+  const handleOpenModalForUpdate = (course) => {
+    setEditingCourse(course);
+    setNewCourse({ title: course.title, description: course.description });
+    setIsUpdating(true);
+    setIsModalOpen(true);
+  };
+
+  const handleUpdateCourse = () => {
+    const updatedCourse = { ...editingCourse, title: newCourse.title, description: newCourse.description };
     dispatch(updateCourse(updatedCourse));
+    setNewCourse({ title: '', description: '' });
+    setIsUpdating(false);
+    setIsModalOpen(false);  // Close modal after updating
   };
 
   const handleRemoveCourse = (courseId) => {
     dispatch(removeCourse(courseId));
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setNewCourse({ title: '', description: '' });
+    setIsUpdating(false);
   };
 
   if (status === 'loading') {
@@ -51,31 +71,13 @@ const CoursesPage = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Courses</h1>
-      
-      <div className="mb-4">
-        <input
-          type="text"
-          name="title"
-          value={newCourse.title}
-          onChange={handleInputChange}
-          placeholder="Course Title"
-          className="border p-2 mr-2"
-        />
-        <input
-          type="text"
-          name="description"
-          value={newCourse.description}
-          onChange={handleInputChange}
-          placeholder="Course Description"
-          className="border p-2 mr-2"
-        />
-        <button
-          onClick={handleAddCourse}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          Add Course
-        </button>
-      </div>
+
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
+      >
+        Add Course
+      </button>
 
       {courses.length === 0 ? (
         <p>No courses available.</p>
@@ -89,7 +91,7 @@ const CoursesPage = () => {
               </div>
               <div>
                 <button
-                  onClick={() => handleUpdateCourse(course)}
+                  onClick={() => handleOpenModalForUpdate(course)}
                   className="bg-green-500 text-white px-2 py-1 rounded mr-2"
                 >
                   Update
@@ -104,6 +106,44 @@ const CoursesPage = () => {
             </li>
           ))}
         </ul>
+      )}
+
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded shadow-md w-1/2">
+            <h2 className="text-xl font-bold mb-4">{isUpdating ? 'Update Course' : 'Add Course'}</h2>
+            <input
+              type="text"
+              name="title"
+              value={newCourse.title}
+              onChange={handleInputChange}
+              placeholder="Course Title"
+              className="border p-2 w-full mb-2"
+            />
+            <input
+              type="text"
+              name="description"
+              value={newCourse.description}
+              onChange={handleInputChange}
+              placeholder="Course Description"
+              className="border p-2 w-full mb-2"
+            />
+            <div className="flex justify-end">
+              <button
+                onClick={closeModal}
+                className="bg-gray-500 text-white px-4 py-2 rounded mr-2"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={isUpdating ? handleUpdateCourse : handleAddCourse}
+                className="bg-blue-500 text-white px-4 py-2 rounded"
+              >
+                {isUpdating ? 'Update Course' : 'Add Course'}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
