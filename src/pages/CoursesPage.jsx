@@ -83,7 +83,7 @@ const CoursesPage = () => {
             {courses.length === 0 ? (
                 <p>No courses available.</p>
             ) : (
-                <div className='flex flex-wrap'>
+                <div className='flex flex-wrap gap-2 p-2 border border-slate-700'>
                     {courses.map((course) =>
                         <CourseCard key={course.id} course={course} handleUpdateCourse={handleUpdateCourse} handleRemoveCourse={handleRemoveCourse} />
                     )}

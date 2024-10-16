@@ -1,9 +1,9 @@
 const CourseCard = ({ course, handleUpdateCourse, handleRemoveCourse }) => {
     return (
-        <div className="flex flex-col min-w-60 h-80 bg-white rounded shadow-md p-4 mb-2">
+        <div className="flex flex-col w-96 bg-white border border-slate-700 rounded shadow-md p-4 mb-2">
             <div>
-                <h2 className="text-xl font-semibold">{course.title}</h2>
-                <img src={course.image} className="w-full h-48 object-cover" alt="" />
+                <h2 className="text-xl font-semibold line-clamp-1">{course.title}</h2>
+                <img src={course.image} className="w-full h-48 object-cover rounded-lg" alt="" />
                 <p>{course.description}</p>
                 <p>{course.instructor}</p>
                 <p>{course.schedule}</p>
