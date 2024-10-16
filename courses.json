@@ -1,0 +1,107 @@
+{
+  "courses": [
+    {
+      "id": "2",
+      "title": "Updated: Updated: Updated: Updated: Updated: Updated: Updated: Updated: Data Structures and Algorithms",
+      "instructor": "Prof. John Doe",
+      "credits": 4,
+      "schedule": "Tue/Thu 2:00 PM - 4:00 PM",
+      "image": "/api/placeholder/800/600"
+    },
+    {
+      "id": "3",
+      "title": "Web Development Fundamentals",
+      "instructor": "Ms. Emily Johnson",
+      "credits": 3,
+      "schedule": "Fri 9:00 AM - 12:00 PM",
+      "image": "/api/placeholder/800/600"
+    },
+    {
+      "id": "4",
+      "title": "Machine Learning Basics",
+      "instructor": "Dr. Michael Chen",
+      "credits": 4,
+      "schedule": "Mon/Wed 2:00 PM - 4:00 PM",
+      "image": "/api/placeholder/800/600"
+    },
+    {
+      "id": "5",
+      "title": "Database Management Systems",
+      "instructor": "Prof. Sarah Brown",
+      "credits": 3,
+      "schedule": "Tue/Thu 10:00 AM - 11:30 AM",
+      "image": "/api/placeholder/800/600"
+    },
+    {
+      "id": "6",
+      "title": "Software Engineering Principles",
+      "instructor": "Dr. Robert Taylor",
+      "credits": 4,
+      "schedule": "Wed/Fri 1:00 PM - 3:00 PM",
+      "image": "/api/placeholder/800/600"
+    },
+    {
+      "id": "d142",
+      "title": "Updated: hghghg",
+      "description": "hghgh"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "courseId": 1,
+      "user": "student123",
+      "text": "Great introductory course! The professor explains concepts clearly.",
+      "date": "2024-03-15T14:30:00Z"
+    },
+    {
+      "id": "2",
+      "courseId": 2,
+      "user": "codemaster",
+      "text": "Challenging but rewarding. Make sure to practice coding regularly.",
+      "date": "2024-03-18T09:45:00Z"
+    },
+    {
+      "id": "3",
+      "courseId": 3,
+      "user": "webdesigner101",
+      "text": "Excellent hands-on experience. Looking forward to building my portfolio!",
+      "date": "2024-03-20T16:20:00Z"
+    },
+    {
+      "id": "4",
+      "courseId": 4,
+      "user": "ai_enthusiast",
+      "text": "Fascinating introduction to ML. The projects are particularly engaging.",
+      "date": "2024-03-22T11:15:00Z"
+    },
+    {
+      "id": "5",
+      "courseId": 5,
+      "user": "data_wizard",
+      "text": "Comprehensive overview of DBMS. The SQL assignments are very practical.",
+      "date": "2024-03-25T13:40:00Z"
+    },
+    {
+      "id": "6",
+      "courseId": 6,
+      "user": "future_dev",
+      "text": "This course really ties together everything we've learned so far. Group projects are challenging but fun!",
+      "date": "2024-03-28T15:55:00Z"
+    },
+    {
+      "id": "7",
+      "courseId": 1,
+      "user": "newbie_coder",
+      "text": "As someone with no prior experience, I found this course very accessible.",
+      "date": "2024-03-30T10:10:00Z"
+    },
+    {
+      "id": "8",
+      "courseId": 3,
+      "user": "design_lover",
+      "text": "The balance between frontend and backend topics is perfect for beginners.",
+      "date": "2024-04-02T14:25:00Z"
+    }
+  ]
+}
