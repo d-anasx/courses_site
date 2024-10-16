@@ -1,13 +1,31 @@
-const CourseCard = (course) => {
-  return (
-    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <h2 className="text-2xl font-bold">{course.course.title}</h2>
-      <p className="text-gray-700 text-sm">{course.course.instructor}</p>
-      <p className="text-gray-700 text-sm">{course.course.credits} credits</p>
-      <p className="text-gray-700 text-sm">{course.course.schedule}</p>
-      <img src={course.course.image} className="w-full h-48 object-cover mt-4"/>
-    </div>
-  )
+const CourseCard = ({ course, handleUpdateCourse, handleRemoveCourse }) => {
+    return (
+        <div className="flex flex-col min-w-60 h-80 bg-white rounded shadow-md p-4 mb-2">
+            <div>
+                <h2 className="text-xl font-semibold">{course.title}</h2>
+                <img src={course.image} className="w-full h-48 object-cover" alt="" />
+                <p>{course.description}</p>
+                <p>{course.instructor}</p>
+                <p>{course.schedule}</p>
+                <p>{course.credits}</p>
+            </div>
+            <div className='flex gap-2'>
+                <button
+                    onClick={() => handleUpdateCourse(course)}
+                    className="bg-green-500 text-white px-2 py-1 rounded mr-2"
+                >
+                    Update
+                </button>
+                <button
+                    onClick={() => handleRemoveCourse(course.id)}
+                    className="bg-red-500 text-white px-2 py-1 rounded"
+                >
+                    Remove
+                </button>
+            </div>
+        </div>
+    )
 }
 
 export default CourseCard
+

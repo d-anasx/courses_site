@@ -6,16 +6,8 @@
       "instructor": "Prof. John Doe",
       "credits": 4,
       "schedule": "Tue/Thu 2:00 PM - 4:00 PM",
-      "image": "/api/placeholder/800/600",
-      "description": "ttttttttttt"
-    },
-    {
-      "id": "3",
-      "title": "Web Development Fundamentals",
-      "instructor": "Ms. Emily Johnson",
-      "credits": 3,
-      "schedule": "Fri 9:00 AM - 12:00 PM",
-      "image": "/api/placeholder/800/600"
+      "image": "https://picsum.photos/200",
+      "description": "tttttttttttvc"
     },
     {
       "id": "4",
@@ -23,7 +15,7 @@
       "instructor": "Dr. Michael Chen",
       "credits": 4,
       "schedule": "Mon/Wed 2:00 PM - 4:00 PM",
-      "image": "/api/placeholder/800/600"
+      "image": "https://picsum.photos/200"
     },
     {
       "id": "5",
@@ -31,7 +23,7 @@
       "instructor": "Prof. Sarah Brown",
       "credits": 3,
       "schedule": "Tue/Thu 10:00 AM - 11:30 AM",
-      "image": "/api/placeholder/800/600"
+      "image": "https://picsum.photos/200"
     },
     {
       "id": "6",
@@ -39,12 +31,21 @@
       "instructor": "Dr. Robert Taylor",
       "credits": 4,
       "schedule": "Wed/Fri 1:00 PM - 3:00 PM",
-      "image": "/api/placeholder/800/600"
+      "image": "https://picsum.photos/200"
     },
     {
       "id": "8996",
       "title": "helloooo",
       "description": "hiiiiiiiiiiiiiiiiiiiiii"
+    },
+    {
+      "id": "9165",
+      "title": "ygjfgh",
+      "description": "gfjfgjfg",
+      "image": "https://picsum.photos/200",
+      "schedule": "hhhhhhhh",
+      "instructor": "hhhhh",
+      "credits": "4"
     }
   ],
   "comments": [

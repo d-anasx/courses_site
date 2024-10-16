@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3030";
+const BASE_URL = "http://192.168.101.70:3030";
 
 // Helper function for API calls
 const apiCall = async (method, endpoint, data = null) => {
